@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --headingFont: "Inconsolata", monospace;
+  --bodyFont: "Montserrat", sans-serif;
+  --letterSpacing: 1px;
+  --box-shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --grey-50: #f2f4f8;
+  --primary-300: #6159ee;
+  --primary-500: #645cff;
+  --primary-700: #281eef;
+  --red-dark: #842029;
+  --green-dark: #0f5132;
+  --green-light: #138b53;
+  --red-light: #bc2b37;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--grey-50);
+}
+
+a {
+  text-decoration: none;
+}
+
+.form__header {
+  font-size: 3rem;
+  font-family: var(--headingFont);
+  letter-spacing: var(--letterSpacing);
+}
+
+.btn {
+  letter-spacing: var(--letterSpacing);
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 2rem;
+  font-family: var(--bodyFont);
+  text-transform: capitalize;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border-radius: 0.3rem;
+}
+
+.btn-submit {
+  color: white;
+  background: var(--primary-500);
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: var(--primary-300);
+}
+
+.container {
+  width: 90vw;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.form__content {
+  padding: 4.5rem 3rem;
+  margin-top: 7rem;
+  background: white;
+  box-shadow: var(--box-shadow-2);
+  border-radius: 0.4rem;
+}
+
+.form__header {
+  margin-bottom: 3rem;
+}
+
+.input__style {
+  font-family: var(--headingFont);
+  padding: 0.7rem 1.2rem;
+  width: 100%;
+  font-size: 2rem;
+  background: var(--grey-50);
+  border-radius: 0.3rem;
+  border: 0;
+  outline: 0;
+}
+
+.input__style:focus {
+  border: 0;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 580px) {
+  .input__container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--grey-50);
+    border-radius: 0.3rem;
+  }
+  .btn {
+    margin-top: 0;
+    padding: 0;
+    width: auto;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+}
+
+/* notify */
+.notify__style {
+  display: none;
+}
+
+.notify__style-active {
+  display: block;
+  transition: all 0.3s ease;
+  margin-top: 1.7rem;
+  font-family: var(--bodyFont);
+  font-size: 2rem;
+  text-align: start;
+}
+
+.notify__success {
+  color: var(--green-dark);
+}
+
+.notify__fail {
+  color: var(--red-dark);
+}
+
+.preloader {
+  font-family: var(--bodyFont);
+  display: block;
+  text-align: center;
+  margin: 3rem 0;
+
+  filter: invert(10%) sepia(99%) saturate(6266%) hue-rotate(250deg)
+    brightness(91%) contrast(109%);
+  font-size: 2rem;
+  visibility: hidden;
+}
+
+/* tasks */
+
+.tasks {
+  font-size: 2.5rem;
+  font-family: var(--bodyFont);
+}
+
+.task {
+  font-family: var(--bodyFont);
+  display: flex;
+  flex-direction: row;
+  background: white;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-2);
+  margin-bottom: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.task:hover {
+  box-shadow: var(--box-shadow-4);
+}
+
+.task__btns {
+  display: flex;
+  flex-direction: row;
+  gap: 0 0.7rem;
+}
+
+.btn-edit {
+  color: var(--green-light);
+}
+.btn-delete {
+  color: var(--red-light);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.btn-delete i {
+  font-size: 2rem;
+}
+
+.btn-error {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: black;
+  color: #fff;
+  width: 170px;
+  gap: 0 0.4rem;
+  margin: 2rem auto;
+}
+
+.tryagain-logo {
+  filter: invert(100%) sepia(7%) saturate(7139%) hue-rotate(257deg)
+    brightness(110%) contrast(105%);
+  width: 25px;
+  height: 25px;
+}
+
+/* edit tasks */
+.edit__task_container {
+  margin-top: 3rem;
+  padding: 3rem 4rem;
+  background: white;
+  font-family: var(--bodyFont);
+  box-shadow: var(--box-shadow-2);
+  border-radius: 0.5rem;
+}
+
+.edit__text {
+  margin-bottom: 2rem;
+}
+
+.edit__task {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: start;
+  gap: 0 4rem;
+  font-size: 1.7rem;
+}
+
+.btn-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.task__completed {
+  text-decoration: line-through;
+}

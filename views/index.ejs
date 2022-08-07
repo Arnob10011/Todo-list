@@ -1,0 +1,41 @@
+<%- include('include/header') %>
+
+<!-- form -->
+<div class="form__container">
+  <div class="form__content container">
+    <form class="form__task" method="post" action="/">
+      <div class="form__header">Task Manager</div>
+
+      <div class="input__container">
+        <input
+          type="text"
+          placeholder="Type here..."
+          class="input__style form__input"
+          name="name"
+        />
+
+        <button type="submit" class="btn btn-submit">submit</button>
+      </div>
+
+      <!-- error or success -->
+      <div class="notify__style">success</div>
+    </form>
+  </div>
+</div>
+<!-- form -->
+
+<!-- preloader -->
+<div class="preloader">
+  <img src="img/tail-spin.svg" />
+</div>
+<!-- preloader -->
+
+<div class="tasks__container">
+  <div class="tasks container">
+    <!-- task -->
+
+    <!-- task -->
+  </div>
+</div>
+
+<%- include('include/footer') %>

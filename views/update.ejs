@@ -1,0 +1,58 @@
+<%- include('include/header') %>
+    <div class="edit__task_section">
+      <form method="post" action="/task-update/<%= id %>" class="edit__task_container container">
+        <h1 class="edit__text">Edit Task</h1>
+
+        <div class="edit__task_content">
+          <div class="edit__task">
+            <label class="task__lable">Task ID</label>
+            <div id="id" class="task__lable_content"><%= id %></div>
+          </div>
+
+
+
+          <div class="edit__task">
+            <label for="name" class="task__lable">name</label>
+            <input
+              type="text"
+              value="<%= name %>"
+              class="task__lable_content input__style"
+              id="edit__input_task"
+              name="name"
+            />
+          </div>
+          <div class="edit__task">
+            <label for="completed" class="task__lable">Completed</label>
+            <input
+              id="edit__checkbox_task"
+              type="checkbox"
+              class="task__lable_content"
+              name="completed"
+             
+            />
+          </div>
+        </div>
+        <button style="width: 100%" type="submit" class="btn btn-submit">
+          Edit
+        </button>
+
+
+
+
+        <div class="notify__style">success</div>
+
+
+
+
+
+      </form>
+
+      <div class="btn-container">
+        <a id="btn-back" class="btn btn-back btn-black" href="/"
+          >Back To Tasks</a
+        >
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/js/edit-task.js"></script>
+</html>

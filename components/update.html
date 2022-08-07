@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+      <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/7f7aea5a19.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../public//style.css" />
+
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div class="edit__task_section">
+      <form class="edit__task_container container">
+        <h1 class="edit__text">Edit Task</h1>
+
+        <div class="edit__task_content">
+          <div class="edit__task">
+            <label class="task__lable">Task ID</label>
+            <div class="task__lable_content">62ea3953cb9029201c519ecf</div>
+          </div>
+          <div class="edit__task">
+            <label for="name" class="task__lable">name</label>
+            <input
+              type="text"
+              value="today is pronab's birthday"
+              class="task__lable_content input__style"
+              name="name"
+            />
+          </div>
+          <div class="edit__task">
+            <label for="completed" class="task__lable">Completed</label>
+            <input
+              type="checkbox"
+              class="task__lable_content"
+              name="completed"
+              value="true"
+            />
+          </div>
+        </div>
+        <button style="width: 100%" type="submit" class="btn btn-submit">
+          Edit
+        </button>
+      </form>
+
+      <div class="btn-container">
+        <a id="btn-back" class="btn btn-back btn-black" href="/"
+          >Back To Tasks</a
+        >
+      </div>
+    </div>
+  </body>
+  <!-- <script src="./public/script.js"></script> -->
+</html>
